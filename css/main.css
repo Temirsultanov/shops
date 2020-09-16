@@ -107,7 +107,7 @@ h4{
 /*  */
 /*  */
 /*  */
-.home{
+.home, .productpage{
     padding-left: var(--padding);
 }
 h1{
@@ -146,7 +146,11 @@ h1{
 .card-img{
     text-align: center;
     margin-top: 30px;
+
     margin-bottom: 20px;
+}
+.card-img img{
+    height: 200px;
 }
 .product-cards{
     display: flex;
@@ -218,6 +222,11 @@ h1{
 .footer-left__logo img{
     width: 200px;
 }
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
 .footer-right h3{
     font-size: 20px;
     margin-bottom: 0;
@@ -252,4 +261,67 @@ h1{
 }
 .adminlink img{
     width: 20px;
+}
+/* Product Page */
+/*  */
+/*  */
+/*  */
+/*  */
+/*  */
+.productpage__img{
+    width: 400px;
+    height: 420px;
+    background-color: #fff;
+
+}
+.productpage h1{
+    font-size: 35px;
+}
+.productpage__wrap-image{
+    width: 400px;
+    display: flex;
+    height: 420px;
+    justify-content: center;
+    align-items: center;
+}
+.productpage__img img{
+    height: 400px;
+    display: block;
+}
+.productpage__body{
+    display: flex;
+    margin-top: 40px;
+}
+.productpage__price{
+    margin: 0;
+    color: var(--dark);
+    font-size: 40px;
+    font-weight: normal;
+}
+.productpage__info{
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.productpage__buy{
+    margin-top: 30px;
+    color: white;
+    background-color: var(--dark);
+    display: block;
+    padding: 10px 25px;
+    box-shadow: 0 0 0 1px var(--dark), 0 0 0 5px var(--dark);
+    transition: box-shadow .2s;
+}
+.productpage__buy:hover{
+    box-shadow: 
+    0 0 0 1px white,
+    0 0 0 5px var(--dark);
+}
+.productpage__desc{
+    width: 550px;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 35px;
 }
