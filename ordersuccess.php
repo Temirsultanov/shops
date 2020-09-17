@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <title>Temirsultanov</title>
-</head>
-<body>
+<?php include('templates/_head.php')  ?>
     <section class="white">
         <header class="header">
             <div class="header__logo">
@@ -17,14 +7,14 @@
                 </svg>
             </div>
             <div class="header__menu">
-                    <a href="" class="menu__cart hmenu-item">
-                        <h4>Корзина</h4>
-                        <img src="images/cart.svg" alt="">
-                    </a>
-                    <a href="" class="menu__contacts hmenu-item">
-                        <h4>Контакты</h4>
-                        <img src="images/phone.svg" alt="">
-                    </a>
+                <a href="" class="menu__cart hmenu-item">
+                    <h4>Корзина</h4>
+                    <img src="images/cart.svg" alt="">
+                </a>
+                <a href="" class="menu__contacts hmenu-item">
+                    <h4>Контакты</h4>
+                    <img src="images/phone.svg" alt="">
+                </a>
             </div>
         </header>
         <ul class="menu">
@@ -34,42 +24,10 @@
             <li class="menu__item"><a href="">Костюмы</a></li>
             <li class="menu__item"><a href="">Жилеты</a></li>
         </ul>
-        <div class="productpage">
-            <h1>Брюки хлопковые DIOR</h1>
-            <div class="productpage__body">
-                <div class="productpage__img">
-                    <div class="productpage__wrap-image">
-                        <img src="images/pants4.png" alt="">
-                    </div>
-                </div>
-                <div class="productpage__info">
-                    <h3 class="productpage__price">17 990 Р</h3>
-                    <a href="order.html" class="productpage__buy">Сделать заказ</a>
-                    <p class="productpage__desc">Прямые антрацитово-серые брюки вошли в летнюю к оллекцию 2020 года. Для пошива модели мастера Дома, основанного Кристианом Диором, использовали мягкий твил из шерсти Super 120S. За счет плотного кручения т волокон ткань получается легкой, гладкой и при этом прочной.</p>
-                </div>
-            </div>
-            
+        <div class="ordersuccess">
+            <h1>Заказ успешно выполнен!</h1>
+            <h3>Наши сотрудники свяжутся с вами в ближайшее время</h3>
+            <a class="link-in-home" href="index.html">Вернуться в каталог</a>
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-left">
-            <div class="footer-left__logo">
-                <img src="images/logolight.svg" alt="">
-            </div>
-            <h5 class="footer-left__author">Designed and developed by <a href="muhammad.std-937.ist.mospolytech.ru">Temirsultanov</a></h5>
-            <h5 class="footer-left__copy">© Все права защищены, 2020</h5>
-            <a href="admin.html" class="adminlink">
-                <img src="images/admin-icon.svg" alt="">
-            </a>
-        </div>
-        <div class="footer-right">
-            <h3>Контакты</h3>
-            <ul class="contact-list">
-                <li class="contact-list__item"><a  href="tg://t.me/temirsultanov">Телеграм : @temirsultanov</a></li>
-                <li class="contact-list__item"><a href="tel:+79286730304">Телефон : +7 (928)-673-03-04</a></li>
-                <li class="contact-list__item"><a href="http://muhammad.std-937.ist.mospolytech.ru/">Сайт: muhammad.mospolytech.ru</a></li>
-            </ul>
-        </div>
-    </footer>
-</body>
-</html> 
+<?php include('templates/_footer.php') ?>

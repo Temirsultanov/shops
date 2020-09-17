@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <title>Temirsultanov</title>
-</head>
-<body>
-    <section class="white">
+<?php include('templates/_head.php')  ?>
+
+<section class="white">
         <header class="header">
             <div class="header__logo">
                 <svg width="297" height="35" viewBox="0 0 297 35" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,104 +20,38 @@
         </header>
         <ul class="menu">
             <li class="menu__item"><a href="">Все товары</a></li>
-            <li class="menu__item"><a href="">Брюки</a></li>
+            <li class="menu__item menu__item-active"><a href="">Брюки</a></li>
             <li class="menu__item"><a href="">Рубашки</a></li>
             <li class="menu__item"><a href="">Костюмы</a></li>
             <li class="menu__item"><a href="">Жилеты</a></li>
         </ul>
-        <!-- <div class="order0">
-            <h1>В корзине 0 товаров :(</h1>
-            <a class="link-in-home" href="index.html">Перейти в каталог</a>
-        </div> -->
-        <div class="order">
-            <h1>Сделать заказ</h1>
-            <div class="orders">
-                <div class="orders__item">
-                    <div class="orders__item-left">
-                        <div class="order__photo">
-                            <img src="images/pants3.png" alt="">
+        <div class="home">
+            <h1>Брюки</h1>
+            <div class="product-cards">
+                <div class="product-card">
+                    <div class="card-top">
+                        <div class="card-top__new">Новинка</div>
+                        <div class="card-top__category">Брюки</div>
+                    </div>
+                    <div class="card-img">
+                        <img src="images/pants4.png" alt="">
+                    </div>
+                    <div class="card-body">
+                        <h2 class="card-body__title">Брюки классические</h2>
+                        <h2 class="card-body__title">Tom Ford</h2>
+                        <div class="card-body__price">
+                            16 980 Р
                         </div>
-                        <div class="order__info">
-                            <h3 class="order__title">Брюки шерстяные HUGO</h3>
-                            <h5 class="order__price">14 000 Р </h5>
+                        <div class="card-body__buttons">
+                            <a href="product-page.html" class="card-body__button">Подробнее</a>
+                            <a href="order.html" class="card-body__button">Купить</a>
                         </div>
                     </div>
-                    <div class="orders__item-right">
-                        <div class="order-counter">
-                            <div class="counter-minus">
-                                <a href="">-</a>
-                            </div>
-                            <div class="counter-count">
-                                <h6>1</h6>
-                            </div>
-                            <div class="counter-plus">
-                                <a href="">+</a>
-                            </div>
-                            
-                        </div>
-                        <a href="" class="order-delete">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                        </a>
-                    </div>
+                    
                 </div>
-                <div class="orders__item">
-                    <div class="orders__item-left">
-                        <div class="order__photo">
-                            <img src="images/pants4.png" alt="">
-                        </div>
-                        <div class="order__info">
-                            <h3 class="order__title">Брюки хлопковые DIOR </h3>
-                            <h5 class="order__price">17 990 Р </h5>
-                        </div>
-                    </div>
-                    <div class="orders__item-right">
-                        <div class="order-counter">
-                            <div class="counter-minus">
-                                <a href="">-</a>
-                            </div>
-                            <div class="counter-count">
-                                <h6>1</h6>
-                            </div>
-                            <div class="counter-plus">
-                                <a href="">+</a>
-                            </div>
-                            
-                        </div>
-                        <a href="" class="order-delete">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z"/></svg>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
-            <h2 class="total-price">Итоговая цена: 31 990 Р</h2>
-            <form action="ordersuccess.html" class="order-form">
-                <input type="text" placeholder="Имя:">
-                <input type="phone" placeholder="Телефон:">
-                <input type="email" placeholder="Email:">
-                <input type="text" placeholder="Адрес:">
-                <input type="submit" value="Оформить заказ">
-            </form>
+            
         </div>
     </section>
-    <footer class="footer">
-        <div class="footer-left">
-            <div class="footer-left__logo">
-                <img src="images/logolight.svg" alt="">
-            </div>
-            <h5 class="footer-left__author">Designed and developed by <a href="muhammad.std-937.ist.mospolytech.ru">Temirsultanov</a></h5>
-            <h5 class="footer-left__copy">© Все права защищены, 2020</h5>
-            <a href="admin.html" class="adminlink">
-                <img src="images/admin-icon.svg" alt="">
-            </a>
-        </div>
-        <div class="footer-right">
-            <h3>Контакты</h3>
-            <ul class="contact-list">
-                <li class="contact-list__item"><a  href="tg://t.me/temirsultanov">Телеграм : @temirsultanov</a></li>
-                <li class="contact-list__item"><a href="tel:+79286730304">Телефон : +7 (928)-673-03-04</a></li>
-                <li class="contact-list__item"><a href="http://muhammad.std-937.ist.mospolytech.ru/">Сайт: muhammad.mospolytech.ru</a></li>
-            </ul>
-        </div>
-    </footer>
-</body>
-</html> 
+<?php include('templates/_footer.php') ?>
