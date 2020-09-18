@@ -5,7 +5,7 @@
             </div>
             <h5 class="footer-left__author">Designed and developed by <a href="muhammad.std-937.ist.mospolytech.ru">Temirsultanov</a></h5>
             <h5 class="footer-left__copy">© Все права защищены, 2020</h5>
-            <a href="admin.html" class="adminlink">
+            <a href="admin.php" class="adminlink">
                 <img src="images/admin-icon.svg" alt="">
             </a>
         </div>

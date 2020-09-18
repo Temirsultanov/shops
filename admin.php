@@ -1,18 +1,21 @@
-<?php include('templates/_head.php')  ?>
+<?php 
+    $pageTitle = 'Главная страница';
+    include('templates/_head.php')  
+?>
     <section class="white">
         <header class="header">
             <div class="header__logo">
                 <h1 class="admin-title">Админ панель</h1>
             </div>
             <div class="header__menu">
-                    <a href="index.html" class="menu__exit">
+                    <a href="index.php" class="menu__exit">
                         <img src="images/exit.svg" alt="">
                     </a>
             </div>
         </header>
         <div class="admin">
             <h2>Добавить товар</h2>
-            <form action="admin.html" class="addproduct-form">
+            <form action="admin.php" class="addproduct-form">
                 <div class="input-block">
                     <input type="text" placeholder="Название:">
                 </div>
@@ -93,7 +96,7 @@
                 </tr>
             </table>
             <h2>Введите SQL-запрос:</h2>
-            <form action="admin.html" class="sql-form">
+            <form action="admin.php" class="sql-form">
                 <div class="input-block">
                     <textarea name="" id="" cols="30" rows="10" placeholder="Your SQL-query:"></textarea>
                 </div>

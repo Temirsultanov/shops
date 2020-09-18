@@ -6,6 +6,6 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="images/favicon.png" type="image/png">
-    <title>Temirsultanov</title>
+    <title><? echo($pageTitle); ?></title>
 </head>
 <body>
