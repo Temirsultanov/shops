@@ -749,3 +749,9 @@ h1{
     margin-top: 35px;
     margin-bottom: 100px;
 }
+.admin-success-links{
+    display: flex;
+}
+.admin-success-links .link-in-home{
+    margin-right: 30px;
+}

@@ -1,4 +1,8 @@
 <?php 
+    session_start();
+    if (!isset($_SESSION['login']) || !($_SESSION['login'] == 'on')) {
+        header('Location: login.php');
+    }
     $pageTitle = 'Главная страница';
     include('templates/_head.php')  
 ?>
@@ -15,34 +19,37 @@
         </header>
         <div class="admin">
             <h2>Добавить товар</h2>
-            <form action="admin.php" class="addproduct-form">
+            <form action="add-new.php" method="POST"enctype="multipart/form-data" class="addproduct-form">
                 <div class="input-block">
-                    <input type="text" placeholder="Название:">
+                    <input name="name" type="text" placeholder="Название:">
                 </div>
                 <div class="input-block">
-                    <select name="" id="">
-                        <option value="">Брюки</option>
-                        <option value="">Рубашки</option>
-                        <option value="">Костюмы</option>
-                        <option value="">Жилеты</option>
+                    <input name="firm" type="text" placeholder="Фирма:">
+                </div>
+                <div class="input-block">
+                    <select name="category" >
+                        <option value="pants">Брюки</option>
+                        <option value="shirt">Рубашки</option>
+                        <option value="suit">Костюмы</option>
+                        <option value="vest">Жилеты</option>
                     </select>
                 </div>
                 <div class="input-block">
-                    <input type="text" placeholder="Цена:">
+                    <input name="price" type="text" placeholder="Цена:">
                 </div>
                 <div class="checkbox-group">
-                    <input type="checkbox" name="" id="">
-                    <label for="">Новинка</label>
-                    <input type="checkbox" name="" id="">
-                    <label for="">Распродажа</label>
+                    <input type="checkbox" value="1" id="new" name="new">
+                    <label for="new">Новинка</label>
+                    <input type="checkbox" value="1" id="sale" name="sale">
+                    <label for="sale">Распродажа</label>
                 </div>
                 <div class="photo-form">
-                    <h5 for="">Фото:</h5>
-                    <label for="photo">Выберите файл<input id="photo" type="file"></label>
+                    <h5 >Фото:</h5>
+                    <label for="photo">Выберите файл<input id="photo" name="img" type="file"></label>
                 </div>
                 <div class="input-block">
-                    <label for="">Описание:</label>
-                    <textarea name="" id="" cols="" rows="" placeholder=""></textarea>
+                    <label for="description">Описание:</label>
+                    <textarea name="description" id="description" cols="" rows="" placeholder=""></textarea>
                 </div>
                 <button class="addform-button" type="submit">Добавить</button>
             </form>

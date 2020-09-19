@@ -1,5 +1,12 @@
 <?php 
     $pageTitle = 'Главная страница';
+    session_start();
+    if (!isset($_SESSION['login']) || !($_SESSION['login'] == 'on')) {
+        header('Location: login.php');
+    }
+    else{
+        header('Location: admin.php');
+    }
     include('templates/_head.php')  
 ?>
 <section class="login">
@@ -11,9 +18,9 @@
         </div>    
     </header>
     <div class="login__body">
-        <form action="admin.php" class="login__form">
+        <form action="check-login.php" method="POST" class="login__form">
             <label for="login">Введите логин: </label>
-            <input name="password" type="text" id="login" placeholder="Логин:">
+            <input name="login" type="text" id="login" placeholder="Логин:">
             <label for="password">Введите логин: </label>
             <input name="password" type="password" id="password" placeholder="Пароль:">
             <input class="login-submit" type="submit" value="Войти">
