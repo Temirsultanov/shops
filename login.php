@@ -1,10 +1,7 @@
 <?php 
     $pageTitle = 'Войти на страницу Админа';
     session_start();
-    if (!isset($_SESSION['login']) || !($_SESSION['login'] == 'on')) {
-        header('Location: login.php');
-    }
-    else{
+    if ($_SESSION['login']) {
         header('Location: admin.php');
     }
     include('templates/_head.php')  

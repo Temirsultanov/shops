@@ -49,7 +49,13 @@
             }
         ?>
     </div>
-    <h2 class="total-price">Итоговая цена: 31 990 Р</h2>
+    <?php 
+        $total_price = 0;
+        foreach($_SESSION['orders'] as $product) {
+            $total_price+=$product['count'] * $product['price'];
+        }
+    ?>
+    <h2 class="total-price">Итоговая цена: <?php echo(number_format($total_price, 0, '', ' ') . ' $'); ?></h2>
     <form action="registration-order.php" method="POST" class="order-form">
         <input name="name" type="text" placeholder="Имя:">
         <input name="phone" type="phone" placeholder="Телефон:">
