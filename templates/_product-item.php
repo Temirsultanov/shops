@@ -19,8 +19,8 @@
                 if ($product['category'] == 'suit') {
                     echo('Костюм');
                 }
-                if ($product['category'] == 'vest') {
-                    echo('Жилет');
+                if ($product['category'] == 'shoes') {
+                    echo('Обувь');
                 }
                 
             ?>
@@ -37,7 +37,7 @@
         </div>
         <div class="card-body__buttons">
             <a href="product-page.php?id=<? echo($product['id']); ?>" class="card-body__button">Подробнее</a>
-            <a href="order.php" class="card-body__button">Купить</a>
+            <a href="add-in-shop.php?id=<?php echo($product['id']); ?>" class="card-body__button">Купить</a>
         </div>
     </div>
 </div>
