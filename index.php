@@ -57,7 +57,7 @@
                 $sql = 'SELECT * from productstemirsultanov where category="suit"';
             }
             else if ($categoryName == 'shoes') {
-                $sql = 'SELECT * from productstemirsultanov where category="foot"';
+                $sql = 'SELECT * from productstemirsultanov where category="shoes"';
             }
             else{
                 $sql = 'SELECT * from productstemirsultanov';
