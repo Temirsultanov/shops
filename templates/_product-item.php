@@ -36,7 +36,7 @@
             <? echo(number_format($product['price'], 0, '', ' ') . ' $'); ?>
         </div>
         <div class="card-body__buttons">
-            <a href="product-page.php" class="card-body__button">Подробнее</a>
+            <a href="product-page.php?id=<? echo($product['id']); ?>" class="card-body__button">Подробнее</a>
             <a href="order.php" class="card-body__button">Купить</a>
         </div>
     </div>

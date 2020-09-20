@@ -1,5 +1,5 @@
 <?php 
-    $pageTitle = 'Главная страница';
+    $pageTitle = 'Заказ успешно выполнен';
     include('templates/_head.php')  
 ?>
 <section class="white">

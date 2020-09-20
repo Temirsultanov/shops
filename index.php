@@ -1,8 +1,8 @@
 <?php 
-    $pageTitle = 'Главная страница';
+    $categoryName = 'Все товары';
+    $pageTitle = 'Главная страница - ' . $categoryName;
     include('templates/_head.php');  
-    require('config.php');
-    $categoryName = 'pants';
+    require('config.php');    
 ?>
 
 <section class="white">
@@ -23,8 +23,8 @@
             else if ($categoryName == 'suit') {
                 $sql = 'SELECT * from productstemirsultanov where category="suit"';
             }
-            else if ($categoryName == 'vest') {
-                $sql = 'SELECT * from productstemirsultanov where category="vest"';
+            else if ($categoryName == 'foot') {
+                $sql = 'SELECT * from productstemirsultanov where category="foot"';
             }
             else{
                 $sql = 'SELECT * from productstemirsultanov';

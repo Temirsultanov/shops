@@ -1,5 +1,5 @@
 <?php 
-    $pageTitle = 'Главная страница';
+    $pageTitle = 'Войти на страницу Админа';
     session_start();
     if (!isset($_SESSION['login']) || !($_SESSION['login'] == 'on')) {
         header('Location: login.php');

@@ -3,7 +3,7 @@
     if (!isset($_SESSION['login']) || !($_SESSION['login'] == 'on')) {
         header('Location: login.php');
     }
-    $pageTitle = 'Главная страница';
+    $pageTitle = 'Admin page';
     include('templates/_head.php')  
 ?>
     <section class="white">
@@ -31,7 +31,7 @@
                         <option value="pants">Брюки</option>
                         <option value="shirt">Рубашки</option>
                         <option value="suit">Костюмы</option>
-                        <option value="vest">Жилеты</option>
+                        <option value="foot">Обувь</option>
                     </select>
                 </div>
                 <div class="input-block">
@@ -58,54 +58,90 @@
                 <tr>
                     <th>Id</th>
                     <th>Название</th>
+                    <th>Фирма</th>
                     <th>Цена</th>
                     <th>Новинка</th>
                     <th>Скидка</th>
                 </tr>
+                <?php
+                    require('config.php');
+                    $sqlprod = 'SELECT * from productstemirsultanov';
+                    $resultprod = $db->query($sqlprod);
+                    $products = $resultprod->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($products as $product) {
+                        echo(
+                            '<tr>
+                                <td>' . $product['id'] . '</td>
+                                <td>' . $product['name'] . '</td>
+                                <td>' . $product['firm'] . '</td>
+                                <td>' . $product['price'] . '</td>
+                                <td>' . $product['new'] . '</td>
+                                <td>' . $product['sale'] . '</td>
+                            </tr>'
+                        );
+                    }
+                ?>
+            </table>
+            <h2>Таблица покупателей</h2>
+            <table class="product-table">
                 <tr>
-                    <td>1</td>
-                    <td>Брюки хлопковые DIOR</td>
-                    <td>17990</td>
-                    <td>1</td>
-                    <td>1</td>
+                    <th>Id</th>
+                    <th>Имя</th>
+                    <th>Телефон</th>
+                    <th>Адрес</th>
+                    <th>Email</th>
                 </tr>
-                <tr>
-                    <td>2</td>
-                    <td>Брюки хлопковые
-                        Stone Island</td>
-                    <td>17400</td>
-                    <td>1</td>
-                    <td>0</td>
+                <?php
+                    require('config.php');
+                    $sqlcust = 'SELECT * from customerstemirsultanov';
+                    $resultcust = $db->query($sqlcust);
+                    $customers = $resultcust->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($customers as $customer) {
+                        echo(
+                            '<tr>
+                                <td>' . $customer['customer_id'] . '</td>
+                                <td>' . $customer['customer_name'] . '</td>
+                                <td>' . $customer['customer_phone'] . '</td>
+                                <td>' . $customer['customer_address'] . '</td>
+                                <td>' . $customer['customer_email'] . '</td>
+                            </tr>'
+                        );
+                    }
+                ?>
+            </table>
+            <h2>Таблица заказов</h2>
+            <table class="product-table">
+                <tr>            
+                    <th>Count</th>
+                    <th>Имя</th>
+                    <th>Телефон</th>
+                    <th>Email</th>
+                    <th>Продукт</th>
+                    <th>Price</th>  
                 </tr>
-                <tr>
-                    <td>3</td>
-                    <td>Брюки шерстяные
-                        HUGO</td>
-                    <td>57050</td>
-                    <td>0</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>4</td>
-                    <td>Брюки шерстяные
-                        Dior </td>
-                    <td>17990</td>
-                    <td>0</td>
-                    <td>1</td>
-                </tr>
-                <tr>
-                    <td>5</td>
-                    <td>Брюки классическиe
-                        Tom Ford</td>
-                    <td>16980</td>
-                    <td>0</td>
-                    <td>0</td>
-                </tr>
+                <?php
+                    require('config.php');
+                    $sqltotal = 'select c.customer_name, c.customer_phone, c.customer_email, p.name, p.price, o.count from customerstemirsultanov as c join orderstemirsultanov as o on o.customer_id=c.customer_id join productstemirsultanov as p on o.product_id=p.id order by c.customer_id;';
+                    $resulttotal = $db->query($sqltotal);
+                    $orders = $resulttotal->fetchAll(PDO::FETCH_ASSOC);
+                    foreach($orders as $order) {
+                        echo('
+                        <tr>
+                        <td>' . $order['count'] . '</td>
+                        <td>' . $order['customer_name'] . '</td>
+                        <td>' . $order['customer_phone'] . '</td>
+                        <td>' . $order['customer_email'] . '</td>
+                        <td>' . $order['name'] . '</td>
+                        <td>' . $order['price'] . '</td>
+                        </tr>'
+                    );
+                    }
+            ?>
             </table>
             <h2>Введите SQL-запрос:</h2>
-            <form action="admin.php" class="sql-form">
+            <form action="sqlquery.php" method="POST" class="sql-form">
                 <div class="input-block">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Your SQL-query:"></textarea>
+                    <textarea name="sqlquery" id="" cols="30" rows="10" placeholder="Your SQL-query:"></textarea>
                 </div>
                 <button  class="addform-button" type="submit">Отправить</button>
             </form>

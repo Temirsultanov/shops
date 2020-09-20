@@ -740,7 +740,7 @@ h1{
     padding-left: 45px;
 }
 .product-table ~ h2{
-    margin: 0;
+    margin-bottom: 30px;
 }
 .sql-form .addform-button{
     margin-top: 30px;
