@@ -717,7 +717,7 @@ h1{
     background-color: var(--dark);
 }
 .product-table tr th:nth-child(3){
-    width: 150px;
+    width: 200px;
 }
 
 .product-table tr th{
