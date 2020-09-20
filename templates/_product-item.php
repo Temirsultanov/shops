@@ -1,13 +1,5 @@
 <div class="product-card">
     <div class="card-top">
-        <?php 
-            if ($product['new']) {
-                echo('<div class="card-top__new">Новинка</div>');
-            }
-            if ($product['sale']) {
-                echo('<div class="card-top__new">Sale</div>');
-            }
-        ?>
         <div class="card-top__category">
             <?php 
                 if ($product['category'] == 'pants') {
@@ -25,6 +17,16 @@
                 
             ?>
         </div>
+        <?php 
+            if ($product['sale']) {
+                echo('<div class="card-top__new">Sale</div>');
+            }
+            if ($product['new']) {
+                echo('<div class="card-top__new">Новинка</div>');
+            }
+            
+        ?>
+        
     </div>
     <div class="card-img">
         <img src="images/<? echo($product['img']);?>" alt="">
