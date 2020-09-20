@@ -1,4 +1,4 @@
-<footer class="footer">
+<footer id="contact" class="footer">
         <div class="footer-left">
             <div class="footer-left__logo">
                 <img src="images/logolight.svg" alt="">
@@ -18,5 +18,6 @@
             </ul>
         </div>
     </footer>
+    <script src="scripts/script.js"></script>
 </body>
 </html> 

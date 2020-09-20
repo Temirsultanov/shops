@@ -1,11 +1,11 @@
 <?php 
-    $pageTitle = 'Продукт';
     require('./config.php');
-    include('templates/_head.php');
     $sql = 'SELECT * from productstemirsultanov where id=' . $_GET["id"];
 	$result = $db->query($sql);
 	$products = $result->fetchAll(PDO::FETCH_ASSOC);
-	$product = $products[0]; 
+    $product = $products[0]; 
+    $pageTitle = $product['name'] .' -  '. $product['firm'];
+    include('templates/_head.php');
 ?>
 <section class="white">
     <?php 
