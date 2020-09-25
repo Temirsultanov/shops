@@ -20,6 +20,6 @@
         $stmt->bindValue(':count', $order['count']);
         $stmt->execute();
     }
-    $_SESSION['orders'] = [];
+    $_SESSION['orders'] = [];   
     header('Location: ordersuccess.php');
 ?>

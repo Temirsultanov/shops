@@ -23,3 +23,18 @@ contactLink.addEventListener('mouseout', function(){
     cartLink.classList.remove('opacity05');
     contactLink.classList.remove('black');
 });
+var burger = document.querySelector('.burger');
+var burgerTop = burger.querySelector('.burger_top');
+var burgerMiddle = burger.querySelector('.burger_middle');
+var burgerBottom = burger.querySelector('.burger_bottom');
+var menuMobile = document.querySelector('.menu-mobile')
+
+var onBurgerClick = function() {
+    burgerTop.classList.toggle('burgertop-active');
+    burgerMiddle.classList.toggle('burgermiddle-active');
+    burgerBottom.classList.toggle('burgerbottom-active');
+    menuMobile.classList.toggle('translate0');
+    document.body.classList.toggle('hidden');
+    burger.classList.toggle('scale2');
+};
+burger.addEventListener('click', onBurgerClick);
