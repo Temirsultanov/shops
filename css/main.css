@@ -135,6 +135,7 @@ h1{
     display: flex;
     flex-direction: column;
     justify-content: flex-end; 
+    box-sizing: border-box;
 }
 .card-top{
     display: flex;
@@ -915,6 +916,31 @@ h1{
     .menu-mobile::-webkit-scrollbar{
         display: none;
     }
+    .product-cards{
+        align-items: center;
+        width: 320px;
+        align-self: center;
+        margin-left: 35px;
+    }
+    .footer{
+        flex-direction: column;
+        padding-left: 45px;  
+        box-sizing: border-box;
+    }
+    .footer-right{
+        align-items: start;
+    }
+    .contact-list{
+        align-items: flex-start;
+    }
+    h5.footer-left__author{
+        margin-bottom: 10px;
+    }
+    .adminlink img{
+        margin-top: 5px;
+        width: 30px;
+
+    }
 }
 .translate0{
     transform: translateX(0);
@@ -923,5 +949,26 @@ h1{
     overflow: hidden;
 }
 .scale2{
-    transform: scale(2);
+    transform: translate(-30px, -50px) scale(2);
+}
+@media only screen and (max-width: 520px){
+    body{
+        --container: 100%;
+        --padding: 20px;
+    }
+    .home, .productpage, .order, .order0, .ordersuccess, .admin{
+        padding-left: 0px;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    .product-cards{
+        margin-left: 0;
+    }
+    h1{
+        width: 320px;
+    }
+    .footer{
+        padding-left: 30px;
+    }
 }

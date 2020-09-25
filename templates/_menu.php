@@ -12,5 +12,4 @@
     <li class="menu__item <?php if ($categoryName == 'suit') { echo('menu__item-active'); }; ?>"><a href="index.php?category=suit">Костюмы</a></li>
     <li class="menu__item <?php if ($categoryName == 'shoes') { echo('menu__item-active'); }; ?>"><a href="index.php?category=shoes">Обувь</a></li>
     <li class="menu__item"><a href="order.php">Корзина</a></li>
-    <li class="menu__item"><a href="order.php">Контакты</a></li>
 </ul>
