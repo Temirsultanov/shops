@@ -303,6 +303,7 @@ h1{
 }
 .productpage__body{
     display: flex;
+    justify-content: flex-start;
     margin-top: 40px;
 }
 .productpage__price{
@@ -853,6 +854,39 @@ h1{
         margin-bottom: 30px;
         margin-top: 40px;
     }
+    /*  */
+    /* Product Page Image */
+    /*  */
+    .productpage__img{
+        height: 315px;
+        width: 300px;
+    }
+    .productpage__img img{
+        height: 300px;
+    } 
+    .productpage__wrap-image{
+        height: 315px;
+        width: 300px;
+    }
+    .productpage h1{
+        font-size: 30px;
+    }
+    .productpage__price{
+        font-size: 30px;
+    }
+    .productpage__buy{
+        font-size: 18px;
+        margin-top: 20px;
+        margin-left: 4px;
+    }
+    .productpage__desc{
+        width: 330px;
+        margin-top: 30px;
+        font-size: 18px;
+    }
+    .productpage__info{
+        margin-left: 40px;
+    }
 }
 .burgertop-active{
     transform: translateY(7px) rotate(45deg);
@@ -941,6 +975,46 @@ h1{
         width: 30px;
 
     }
+    /*  */
+    /* Product Page */
+    /*  */
+    .productpage__firm{
+        display: block;
+    }
+    .productpage__body{
+        flex-direction: column;
+        margin-top: 30px;
+    }
+    .productpage__info{
+        margin-left: 0;
+    }
+    .productpage__buy{
+        margin-top: 0;    
+    }
+    .productpage__buyprice{
+        display: flex;
+        width: 395px;
+        margin-top: 35px;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .productpage__img img{
+        height: 400px;
+    }
+    .productpage__img{
+        width: 400px;
+        height: 420px;
+    }
+    .productpage__desc{
+        width: 400px;
+    }
+    .productpage__wrap-image{
+        height: 420px;
+        width: 400px;
+    }
+    .productpage{
+        padding-left: 40px;
+    }
 }
 .translate0{
     transform: translateX(0);
@@ -962,6 +1036,10 @@ h1{
         display: flex;
         flex-direction: column;
     }
+    .productpage h1{
+        font-size: 28px;
+        margin-bottom: 0;
+    }
     .product-cards{
         margin-left: 0;
     }
@@ -970,5 +1048,31 @@ h1{
     }
     .footer{
         padding-left: 30px;
+    }
+    .productpage__img{
+        height: 320px;
+        width: 305px;
+    }
+    .productpage__img img{
+        height: 305px;
+    } 
+    .productpage__wrap-image{
+        height: 320px;
+        width: 305px;
+    }
+    .productpage__buy{
+        margin-top: 25px;
+    }
+    .productpage__buyprice{
+        display: flex;
+        width: auto;
+        margin-top: 20px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+    .productpage__desc{
+        width: 320px;
+        margin-top: 25px;
     }
 }

@@ -14,7 +14,7 @@
     ?>
     <div class="productpage">
         <h1>
-            <?php echo($product['name'] .' ' . $product['firm']); ?>
+            <?php echo($product['name'] .' <span class="productpage__firm">' . $product['firm'] . ' </span>');  ?>
         </h1>
         <div class="productpage__body">
             <div class="productpage__img">
@@ -23,10 +23,12 @@
                 </div>
             </div>
             <div class="productpage__info">
+                <div class="productpage__buyprice">
                 <h3 class="productpage__price">
                 <? echo(number_format($product['price'], 0, '', ' ') . ' $'); ?>
                 </h3>
                 <a href="add-in-shop.php?id=<? echo($product['id']); ?>" class="productpage__buy">Сделать заказ</a>
+                </div>
                 <p class="productpage__desc">
                     <?php echo($product['description']); ?>
                 </p>
