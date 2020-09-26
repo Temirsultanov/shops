@@ -22,7 +22,8 @@
             <input name="password" type="password" id="password" placeholder="Пароль:">
             <input class="login-submit" type="submit" value="Войти">
         </form>
-        <a class="login-backlink" href="index.php">Вернуться в каталог</a>
+        <a class="login-backlink" href="index.php">
+            <h2>Вернуться в каталог</h2></a>
     </div>
 </section>
 <?php include('templates/_footer.php') ?>
