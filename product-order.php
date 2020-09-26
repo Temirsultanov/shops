@@ -15,7 +15,7 @@
                    <div class="orders__item">
                         <div class="orders__item-left">
                             <div class="order__photo">
-                                <img src="images/'.$product['img'].'" alt="">
+                                <a href="images/' . $product['img']. ' " data-fancybox="gallery"><img src="images/'.$product['img'].'" alt=""></a>
                             </div>
                             <div class="order__info">
                                 <h3 class="order__title">'.$product['name'].' '.$product['firm'].'</h3>

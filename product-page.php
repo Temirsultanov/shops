@@ -19,7 +19,9 @@
         <div class="productpage__body">
             <div class="productpage__img">
                 <div class="productpage__wrap-image">
-                    <img src="images/<? echo($product['img']); ?>" alt="">
+                    <a href="images/<? echo($product['img']); ?>" data-fancybox="gallery">
+                        <img src="images/<? echo($product['img']); ?>" alt="">
+                    </a>
                 </div>
             </div>
             <div class="productpage__info">

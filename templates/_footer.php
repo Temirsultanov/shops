@@ -1,4 +1,4 @@
-<footer id="contact" class="footer">
+<footer id="contact" class="footer wow fadeIn">
         <div class="footer-left">
             <div class="footer-left__logo">
                 <img src="images/logolight.svg" alt="">
@@ -18,6 +18,10 @@
             </ul>
         </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     <script src="scripts/script.js"></script>
 </body>
 </html> 

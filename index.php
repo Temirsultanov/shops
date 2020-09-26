@@ -29,19 +29,19 @@
     <div class="home">
         <?php 
             if ($categoryName == 'pants') {
-                echo('<h1>Брюки</h1>');
+                echo('<h1 class="wow fadeIn">Брюки</h1>');
             }
             else if ($categoryName == 'shirt') {
-                echo('<h1>Рубашки</h1>');
+                echo('<h1 class="wow fadeIn">Рубашки</h1>');
             }
             else if ($categoryName == 'suit') {
-                echo('<h1>Костюмы</h1>');
+                echo('<h1 class="wow fadeIn">Костюмы</h1>');
             }
             else if ($categoryName == 'shoes') {
-                echo('<h1>Обувь</h1>');
+                echo('<h1 class="wow fadeIn">Обувь</h1>');
             }
             else{
-                echo('<h1>Все товары</h1>');
+                echo('<h1 class="wow fadeIn">Все товары</h1>');
             }
             
         ?>

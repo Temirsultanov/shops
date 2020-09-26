@@ -1,4 +1,4 @@
-<div class="product-card">
+<div class="product-card wow fadeIn">
     <div class="card-top">
         <div class="card-top__category">
             <?php 
@@ -29,7 +29,7 @@
         
     </div>
     <div class="card-img">
-        <img src="images/<? echo($product['img']);?>" alt="">
+        <a href="images/<? echo($product['img']); ?>" data-fancybox="gallery"><img src="images/<? echo($product['img']);?>" alt=""></a>
     </div>
     <div class="card-body">
         <h2 class="card-body__title"><? echo($product['name']); ?></h2>
