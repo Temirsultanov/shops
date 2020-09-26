@@ -12,7 +12,7 @@
         <div class="footer-right">
             <h3>Контакты</h3>
             <ul class="contact-list">
-                <li class="contact-list__item"><a  href="tg://t.me/temirsultanov">Телеграм : @temirsultanov</a></li>
+                <li class="contact-list__item"><a  href="tg://resolve?domain=temirsultanov">Телеграм : @temirsultanov</a></li>
                 <li class="contact-list__item"><a href="tel:+79286730304">Телефон : +7 (928)-673-03-04</a></li>
                 <li class="contact-list__item"><a href="http://muhammad.std-937.ist.mospolytech.ru/">Сайт: muhammad.mospolytech.ru</a></li>
             </ul>
