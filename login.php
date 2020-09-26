@@ -23,7 +23,7 @@
             <input class="login-submit" type="submit" value="Войти">
         </form>
         <a class="login-backlink" href="index.php">
-            <h2>Вернуться в каталог</h2></a>
+            Вернуться в каталог</a>
     </div>
 </section>
 <?php include('templates/_footer.php') ?>
