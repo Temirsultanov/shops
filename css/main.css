@@ -145,6 +145,18 @@ h1{
     justify-content: flex-end; 
     box-sizing: border-box;
 }
+.product-card:not(:first-child){
+    margin-top: 50px;
+}
+.product-card:nth-child(2){
+    margin-top: 0px;
+}
+.product-card:nth-child(3){
+    margin-top: 0;
+}
+.product-card:not(:nth-child(3)) {
+    margin-right: 50px;
+}
 .card-top{
     display: flex;
     justify-content: space-between;
@@ -166,7 +178,6 @@ h1{
 .card-img{
     text-align: center;
     margin-top: 30px;
-
     margin-bottom: 20px;
 }
 .card-img img{
@@ -174,7 +185,6 @@ h1{
 }
 .product-cards{
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
 }
 .card-body{
@@ -865,6 +875,10 @@ h1{
         margin-bottom: 30px;
         margin-top: 40px;
     }
+    .product-card:nth-child(3){
+        margin-top: 50px;
+        margin-right: 50px;
+    }
     /*  */
     /* Product Page Image */
     /*  */
@@ -1023,6 +1037,12 @@ h1{
     }
     .header__menu{
         display: none;
+    }
+    .product-card:nth-child(2){
+        margin-top: 50px;
+    }
+    .product-card:not(:nth-child(3)) {
+        margin-right: 0;
     }
     .header__logo svg{
         width: 200px;
