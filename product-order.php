@@ -67,10 +67,10 @@
     ?>
     <h2 class="total-price">Итоговая цена: <?php echo(number_format($total_price, 0, '', ' ') . ' $'); ?></h2>
     <form action="registration-order.php" method="POST" class="order-form">
-        <input name="name" type="text" placeholder="Имя:">
-        <input name="phone" type="phone" placeholder="Телефон:">
-        <input name="email" type="email" placeholder="Email:">
-        <input name="address" type="text" placeholder="Адрес:">
+        <input name="name" type="text" placeholder="Имя:" required>
+        <input name="phone" type="phone" placeholder="Телефон:" required>
+        <input name="email" type="email" placeholder="Email:" required>
+        <input name="address" type="text" placeholder="Адрес:" required>
         <input type="submit" value="Оформить заказ">
     </form>
 </div>
