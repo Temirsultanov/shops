@@ -387,7 +387,9 @@ h1{
     height: 50px;
     box-sizing: border-box;
 }
-
+.order-counter1{
+    display: none;
+}
 .order-counter a, .order-counter h6{
     width: 60px;
     display: block;
@@ -795,6 +797,7 @@ h1{
     transition: .2s;
     filter: brightness(0.3);
 }
+
 .menu__exit{
     transition: .2s;
 }
@@ -834,6 +837,7 @@ h1{
     body{
         --container: 800px;
     }
+    
     .header__logo svg{
         width: 250px;
     }
@@ -886,6 +890,60 @@ h1{
     }
     .productpage__info{
         margin-left: 40px;
+    }
+    /*  */
+    /* Order */
+    /*  */
+    .order-form input:not([type="submit"]){
+        width: 500px;
+    }
+    .order__title{
+        font-size: 25px;
+        max-width: 480px;
+        
+    }
+    .order__price{
+        font-size: 18px;
+    }
+    .order-counter a, .order-counter h6{
+        font-size: 18px;
+        height: 40px;
+        line-height: 40px;
+        width: 45px;
+    }
+    .orders__item{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+    }
+    .order__item{
+        width: 690px;
+    }
+    .order-counter{
+        width: 135px;
+        margin-top: 25px;
+    }
+    .order-counter1{
+        display: flex;
+    }
+    .order-counter2{
+        display: none;
+    }
+    .orders__item-right{
+        position: absolute;
+        top: 85px;
+        right: 30px;
+    }
+    .order-delete{
+        margin: 0;
+    }
+    .orders__item-left{
+        align-items: center;
+    }
+    .total-price{
+        margin-top: 40px;
+        margin-bottom: 45px;
     }
 }
 .burgertop-active{
@@ -1015,6 +1073,54 @@ h1{
     .productpage{
         padding-left: 40px;
     }
+    /*  */
+    /* Order */
+    /*  */
+    .order{
+        padding-left: 40px;
+    }
+    .order h1{
+        font-size: 30px;
+    }
+    .order-form input:not([type="submit"]){
+        width: 400px;
+    }
+    .order__title{
+        font-size: 22px;
+        margin-top: 15px;
+    }
+    .order-counter1{
+        display: none;
+    }
+    .order-counter2{
+        display: flex;
+        margin-top: 0;
+        height: 40px;
+    }
+    .order-delete{
+        margin-left: 50px;
+    }
+    .total-price{
+        font-size: 27px;
+        margin-bottom: 40px;
+        margin-top: 35px;
+    }
+    .orders__item-left{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .orders__item-right{
+        align-items: center;
+        display: flex;
+    }
+    .orders__item{
+        height: auto;
+        width: 400px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        padding-left: 20px;
+        box-sizing: border-box;
+    }
 }
 .translate0{
     transform: translateX(0);
@@ -1049,6 +1155,9 @@ h1{
     .footer{
         padding-left: 30px;
     }
+    /*  */
+    /* Product Page */
+    /*  */
     .productpage__img{
         height: 320px;
         width: 305px;
@@ -1075,4 +1184,69 @@ h1{
         width: 320px;
         margin-top: 25px;
     }
+    /*  */
+    /* Order */
+    /*  */
+    .order h1{
+        font-size: 28px;
+        width: 360px;
+    }
+    .order-form input:not([type="submit"]){
+        width: 360px;
+    }
+    .order__title{
+        font-size: 20px;
+    }
+    .orders__item{
+        width: 360px;
+    }
+    .order-delete{
+        margin-left: 30px;
+    }
+    .order h2{
+        width: 360px;
+    }
+    .order-form input{
+        font-size: 18px;
+    }
+    .order-form input[type="submit"]{
+        width: 200px;   
+    }
+    .order-form input::placeholder{
+        font-size: 18px;
+    }
 }
+@media only screen and (max-width: 400px) {
+    .order h2{
+        width: 320px;
+    }
+    .order h1{
+        width: 320px;
+    }
+    .order-form input:not([type="submit"]){
+        width: 320px;
+    }
+    .orders__item{
+        width: 320px;
+        padding-right: 15px;
+    }
+    .order__title{
+        font-size: 18px;
+    }
+    .order__price{
+        font-size: 16px;
+    }
+    .order-delete{
+        margin-left: 20px;
+    }
+    .order-delete svg{
+        width: 16px;
+    }
+    .orders__item-right{
+        right: 20px;
+    }
+    .total__price{
+        font-size: 22px;
+    }
+}
+
