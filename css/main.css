@@ -1151,7 +1151,19 @@ h1{
     .ordersuccess h3{
         width: 350px;
         margin-bottom: 40px;
-}
+    }
+    /* Login */
+    .login{
+        width: 480px;
+        height: 570px;
+    }
+    .login__form input:not([type="submit"]){
+        width: 400px;
+    }
+    .login__body{
+        padding-top: 35px;
+    }
+}  
 /* -------------------------------------------------------------- */
 /* -------------------------------------------------------------- */
 /* -------------------------------------------------------------- */
@@ -1279,6 +1291,14 @@ h1{
         align-items: flex-start;
         padding-left: 20px;
     }
+    /* Login */
+    .login{
+        margin-top: 60px;
+        width: 100%;
+    }
+    .login__form input:not([type="submit"]){
+        width: 360px;
+    }
 }
 @media only screen and (max-width: 400px) {
     .order h2{
@@ -1326,5 +1346,28 @@ h1{
     .ordersuccess h1{
         font-size: 22px;
     }
+    /* Login */
+    .login{
+        margin-top: 0;
+    }
+    .login__form input:not([type="submit"]){
+        width: 320px;
+    }
+    .login__header{
+        padding-left: 20px;
+    }
+    .login__body{
+        padding-left: 20px;
+    }
+    .login__form label{
+        font-size: 18px;
+    }
+    .login__form input::placeholder{
+        font-size: 18px;
+    }
+    .login__form .login-submit{
+        font-size: 18px;
+    }
 }
+
 
