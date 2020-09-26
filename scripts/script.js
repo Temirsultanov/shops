@@ -38,3 +38,13 @@ var onBurgerClick = function() {
     burger.classList.toggle('scale2');
 };
 burger.addEventListener('click', onBurgerClick);
+window.addEventListener('resize', function(){
+    if (document.body.classList.contains('hidden') && window.innerWidth > 840) {
+        burgerTop.classList.toggle('burgertop-active');
+        burgerMiddle.classList.toggle('burgermiddle-active');
+        burgerBottom.classList.toggle('burgerbottom-active');
+        menuMobile.classList.toggle('translate0');
+        document.body.classList.toggle('hidden');
+        burger.classList.toggle('scale2');    
+    };
+});
