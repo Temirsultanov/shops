@@ -950,7 +950,12 @@ h1{
     /* Order success */
     .ordersuccess h1{
         font-size: 35px;
+        margin-top: 35px;
     }
+    .ordersuccess h3{
+        margin-bottom: 60px;
+    }
+
 }
 /* ------------------------------------ */
 /* ------------------------------------ */
@@ -1140,8 +1145,12 @@ h1{
     }
     /* Order success */
     .ordersuccess h1{
-        font-size: 29px;
+        font-size: 28px;
+        margin-top: 30px;
     }
+    .ordersuccess h3{
+        width: 350px;
+        margin-bottom: 40px;
 }
 /* -------------------------------------------------------------- */
 /* -------------------------------------------------------------- */
@@ -1259,10 +1268,16 @@ h1{
     }
     /* Order success */
     .ordersuccess h1{
-        font-size: 28px;
+        font-size: 26px;
+        width: 320px;
     }
     .ordersuccess h3{
         font-size: 18px;
+        width: 310px;
+    }
+    .ordersuccess{
+        align-items: flex-start;
+        padding-left: 20px;
     }
 }
 @media only screen and (max-width: 400px) {
